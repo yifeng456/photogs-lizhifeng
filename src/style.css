@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+/* ===== 主题色配置 ===== */
+@theme {
+  --color-primary: #1a1a2e;
+  --color-primary-light: #16213e;
+  --color-accent: #e94560;
+  --color-accent-light: #f06292;
+  --color-surface: #f8f9fa;
+  --color-muted: #6b7280;
+  --font-sans: 'Inter', 'PingFang SC', 'Microsoft YaHei', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* ===== 全局基础样式 ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 图片默认样式 */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
