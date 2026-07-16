@@ -1,6 +1,4 @@
-@import "tailwindcss";
-
-/* ===== 主题色配置 ===== */
+/* ===== 主题色配置（必须在 @import 之前） ===== */
 @theme {
   --color-primary: #1a1a2e;
   --color-primary-light: #16213e;
@@ -11,6 +9,8 @@
   --font-sans: 'Inter', 'PingFang SC', 'Microsoft YaHei', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 }
+
+@import "tailwindcss";
 
 /* ===== 全局基础样式 ===== */
 html {

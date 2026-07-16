@@ -42,7 +42,7 @@
 const currentYear = new Date().getFullYear()
 
 const socialLinks = [
-  { label: 'GitHub', url: 'https://github.com/', icon: '🐙' },
+  { label: 'GitHub', url: 'https://github.com/yifeng456', icon: '🐙' },
   { label: 'Instagram', url: 'https://instagram.com/', icon: '📷' },
 ]
 </script>

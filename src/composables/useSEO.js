@@ -1,4 +1,4 @@
-import { watch, onMounted } from 'vue'
+import { watch, onMounted, unref } from 'vue'
 import { useRoute } from 'vue-router'
 
 /**
@@ -7,6 +7,9 @@ import { useRoute } from 'vue-router'
  *
  * 使用方式：
  *   useSEO({ title: '首页', description: '...' })
+ *   // 支持传入 ref/computed 实现响应式：
+ *   const desc = computed(() => '...')
+ *   useSEO({ description: desc })
  *
  * 路由守卫 router.afterEach 已处理基础 title，
  * 此 composable 用于页面级别的精细化控制（description、og:image 等）
@@ -16,10 +19,10 @@ export function useSEO(options = {}) {
   const siteName = '光影记录 - 个人摄影作品集'
 
   function updateMeta() {
-    const title = options.title || route.meta?.title || '摄影作品集'
-    const description = options.description || '用镜头记录生活的美好瞬间，个人摄影作品展示'
-    const image = options.image || '/og-image.jpg'
-    const url = options.url || `https://photogs-lizhifeng.vercel.app${route.path}`
+    const title = unref(options.title) || route.meta?.title || '摄影作品集'
+    const description = unref(options.description) || '用镜头记录生活的美好瞬间，个人摄影作品展示'
+    const image = unref(options.image) || '/og-image.jpg'
+    const url = unref(options.url) || `https://yifeng456.github.io/photogs-lizhifeng${route.path}`
 
     // 页面标题
     document.title = `${title} - ${siteName}`

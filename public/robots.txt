@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://photogs-lizhifeng.vercel.app/sitemap.xml
+Sitemap: https://yifeng456.github.io/photogs-lizhifeng/sitemap.xml
