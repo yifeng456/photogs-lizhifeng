@@ -71,6 +71,7 @@ const route = useRoute()
 const navItems = [
   { label: '首页', to: '/' },
   { label: '作品集', to: '/gallery' },
+  { label: '视频', to: '/videos' },
   { label: '关于我', to: '/about' },
 ]
 

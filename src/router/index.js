@@ -31,6 +31,12 @@ const routes = [
     meta: { title: '照片详情' }
   },
   {
+    path: '/videos',
+    name: 'videos',
+    component: () => import('@/views/VideosPage.vue'),
+    meta: { title: '视频作品' }
+  },
+  {
     path: '/about',
     name: 'about',
     component: () => import('@/views/AboutPage.vue'),
