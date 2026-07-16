@@ -1,8 +1,8 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 
 /**
  * 路由配置
- * 使用 History 模式，Vercel 通过 vercel.json 配置 SPA fallback
+ * 使用 Hash 模式（#/path），兼容 Gitee Pages 等不支持 URL 重写的静态托管
  * 所有页面组件使用懒加载以减小首屏体积
  */
 const routes = [
@@ -45,7 +45,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
   // 路由切换时滚动到顶部
   scrollBehavior() {
