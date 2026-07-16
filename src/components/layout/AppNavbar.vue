@@ -1,8 +1,8 @@
 <!--
   顶部导航栏
   - 固定顶部，滚动时添加毛玻璃背景
-  - 移动端：汉堡菜单展开
-  - PC 端：横向导航链接
+  - 移动端：汉堡菜单展开，路由切换自动关闭
+  - PC 端：横向导航链接，首页精确匹配高亮
 -->
 <template>
   <nav
@@ -22,8 +22,8 @@
             v-for="item in navItems"
             :key="item.to"
             :to="item.to"
-            class="text-sm font-medium text-gray-600 hover:text-accent transition-colors"
-            active-class="text-accent"
+            class="text-sm font-medium transition-colors"
+            :class="getLinkClass(item)"
           >
             {{ item.label }}
           </router-link>
@@ -44,13 +44,13 @@
 
       <!-- 移动端菜单 -->
       <Transition name="mobile-menu">
-        <div v-if="mobileOpen" class="md:hidden pb-4">
+        <div v-if="mobileOpen" class="md:hidden pb-4 border-t border-gray-100 mt-2 pt-3">
           <router-link
             v-for="item in navItems"
             :key="item.to"
             :to="item.to"
-            class="block py-2 text-sm font-medium text-gray-600 hover:text-accent transition-colors"
-            active-class="text-accent"
+            class="block py-3 text-sm font-medium rounded-lg px-3 mb-1 transition-colors"
+            :class="getLinkClass(item)"
             @click="mobileOpen = false"
           >
             {{ item.label }}
@@ -62,7 +62,10 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, watch } from 'vue'
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
 
 /** 导航项配置 */
 const navItems = [
@@ -73,6 +76,29 @@ const navItems = [
 
 const mobileOpen = ref(false)
 const isScrolled = ref(false)
+
+/**
+ * 获取导航链接的动态样式类
+ * - 首页（/）：只在精确匹配时高亮，避免在其他页面也显示 active
+ * - 其他页面：路径前缀匹配时高亮（如 /gallery/landscape 也高亮作品集）
+ */
+function getLinkClass(item) {
+  if (item.to === '/') {
+    // 首页需要精确匹配，否则所有页面都会命中
+    return route.path === '/'
+      ? 'text-accent'
+      : 'text-gray-600 hover:text-accent'
+  }
+  // 其他导航项使用前缀匹配
+  return route.path.startsWith(item.to)
+    ? 'text-accent'
+    : 'text-gray-600 hover:text-accent'
+}
+
+// 路由切换时自动关闭移动端菜单（处理浏览器前进后退等场景）
+watch(() => route.fullPath, () => {
+  mobileOpen.value = false
+})
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 10
