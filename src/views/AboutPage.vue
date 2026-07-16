@@ -51,7 +51,7 @@
           <p class="text-xs text-muted mt-1">主题分类</p>
         </div>
         <div class="text-center p-4 rounded-xl bg-gray-50">
-          <p class="text-2xl font-bold text-gray-900">2</p>
+          <p class="text-2xl font-bold text-gray-900">3</p>
           <p class="text-xs text-muted mt-1">年摄影之路</p>
         </div>
       </div>

@@ -26,12 +26,6 @@ export const categories = [
     label: '人像',
     icon: '👤',
     description: '人物肖像、情绪写真，定格光影中的面孔'
-  },
-  {
-    key: 'night',
-    label: '夜景',
-    icon: '🌃',
-    description: '华灯初上、星河璀璨，夜色中的光影故事'
   }
 ]
 

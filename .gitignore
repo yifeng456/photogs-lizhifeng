@@ -17,6 +17,7 @@ dist/
 .idea/
 
 # 系统
+作品集/
 .DS_Store
 Thumbs.db
 
