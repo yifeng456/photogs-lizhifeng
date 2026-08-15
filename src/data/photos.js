@@ -2643,28 +2643,6 @@ export const photos = [
     "featured": false
   },
   {
-    "id": 108,
-    "title": "IMG 6407",
-    "description": "",
-    "category": "portrait",
-    "src": "/photogs-lizhifeng/photos/portrait/IMG_6407.PNG",
-    "thumbnail": "/photogs-lizhifeng/photos/thumbnails/IMG_6407.webp",
-    "width": 1125,
-    "height": 2436,
-    "date": "2024-08-30",
-    "exif": {
-      "camera": null,
-      "lens": null,
-      "focalLength": null,
-      "aperture": null,
-      "shutterSpeed": null,
-      "iso": null
-    },
-    "location": null,
-    "tags": [],
-    "featured": false
-  },
-  {
     "id": 110,
     "title": "IMG 6477",
     "description": "",
