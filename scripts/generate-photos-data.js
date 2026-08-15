@@ -15,6 +15,7 @@
 
 import fs from 'fs'
 import path from 'path'
+import sharp from 'sharp'
 import { fileURLToPath } from 'url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -73,7 +74,6 @@ async function main() {
             'Make', 'Model', 'LensModel',
             'FocalLength', 'FNumber', 'ExposureTime', 'ISO',
             'DateTimeOriginal',
-            'ImageWidth', 'ImageHeight',
           ]
         })
         if (data) {
@@ -91,12 +91,23 @@ async function main() {
               : null,
             iso: data.ISO || null,
           }
-          width = data.ImageWidth || 0
-          height = data.ImageHeight || 0
           dateTaken = data.DateTimeOriginal || null
         }
       } catch (e) {
         // EXIF 读取失败，使用默认值
+      }
+
+      // 用 sharp 读取真实像素尺寸（可靠，且按 EXIF 方向纠正竖拍/横拍）
+      // 注意：不能用 exifr 的 ImageWidth/ImageHeight，很多相机不写这两个字段
+      try {
+        const meta = await sharp(filePath).metadata()
+        const orientation = meta.orientation || 1
+        const isRotated = orientation >= 5 && orientation <= 8
+        // orientation 5-8 表示画面需旋转 90°/270°，显示尺寸宽高互换
+        width = isRotated ? meta.height : meta.width
+        height = isRotated ? meta.width : meta.height
+      } catch (e) {
+        // sharp 读取失败，保留默认值（后面会用 4000×3000 兜底）
       }
 
       // 文件名作为标题（去掉序号前缀和多余符号）

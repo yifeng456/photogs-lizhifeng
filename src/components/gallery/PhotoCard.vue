@@ -1,20 +1,21 @@
 <!--
   单张照片卡片
-  - 缩略图按原图比例展示
+  - 等高行布局：由父组件传入行高，本组件按照片宽高比计算宽度
+  - 横向照片宽、竖向照片窄，均不变形
   - 悬停时显示标题和分类
   - 骨架屏加载占位
 -->
 <template>
   <div
-    class="group relative rounded-lg overflow-hidden bg-gray-100 mb-4 cursor-pointer break-inside-avoid"
+    class="group relative rounded-lg overflow-hidden bg-gray-100 cursor-pointer"
+    :style="cardStyle"
     @click="$emit('click')"
   >
     <!-- 图片 -->
     <img
       :src="photo.thumbnail"
       :alt="photo.title"
-      class="w-full h-auto block transition-transform duration-500 group-hover:scale-105"
-      :style="{ aspectRatio: `${photo.width}/${photo.height}` }"
+      class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
       loading="lazy"
       @load="loaded = true"
     />
@@ -39,6 +40,8 @@ import { categories } from '@/data/categories.js'
 
 const props = defineProps({
   photo: { type: Object, required: true },
+  /** 所在行的高度（px），等高行布局下必传 */
+  height: { type: Number, required: true },
 })
 
 defineEmits(['click'])
@@ -49,4 +52,17 @@ const categoryLabel = computed(() => {
   const cat = categories.find(c => c.key === props.photo.category)
   return cat ? `${cat.icon} ${cat.label}` : props.photo.category
 })
+
+const aspectRatio = computed(() => {
+  const w = props.photo.width
+  const h = props.photo.height
+  return w && h ? w / h : 1
+})
+
+// flex-grow 设为宽高比：行内各照片按比例分配宽度，正好填满整行且不变形
+const cardStyle = computed(() => ({
+  flex: `${aspectRatio.value} 1 0`,
+  height: `${props.height}px`,
+  minWidth: 0,
+}))
 </script>

@@ -52,7 +52,9 @@ async function main() {
       if (!IMAGE_EXTS.includes(ext)) continue
 
       total++
-      const baseName = path.basename(file, ext)
+      // 用 path.parse().name 取文件名（不含扩展名），避免 .JPG 大写扩展名导致
+      // path.basename(file, '.jpg') 大小写敏感匹配失败，生成 "XXX.JPG.webp" 这类错误命名
+      const baseName = path.parse(file).name
       const outputName = `${baseName}.webp`
       const outputPath = path.join(THUMBNAIL_DIR, outputName)
 
@@ -66,6 +68,7 @@ async function main() {
       const inputPath = path.join(dirPath, file)
       try {
         await sharp(inputPath)
+          .rotate() // 自动按 EXIF Orientation 纠正方向，避免竖拍照片侧躺
           .resize({ width: THUMBNAIL_WIDTH, withoutEnlargement: true })
           .webp({ quality: QUALITY })
           .toFile(outputPath)

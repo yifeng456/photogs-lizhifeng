@@ -1,25 +1,24 @@
 /**
- * 照片静态数据（自动生成于 2026-07-16）
+ * 照片静态数据（宽高已用 sharp 修正，含方向纠正）
  *
  * 数据结构说明：
  * - id：唯一标识
  * - title：作品标题
- * - description：作品描述（请手动填写）
+ * - description：作品描述
  * - category：分类 key（landscape/street/portrait）
  * - src：原图路径（public/photos/ 下）
  * - thumbnail：缩略图路径（public/photos/thumbnails/ 下）
- * - width / height：原图尺寸（用于瀑布流计算纵横比）
+ * - width / height：显示尺寸（已按 EXIF 方向纠正，用于布局计算纵横比）
  * - date：拍摄日期
  * - exif：拍摄参数（自动读取，可能有空值）
- * - location：拍摄地点（{ name, lat, lng }，请手动填写）
- * - tags：标签数组（请手动填写）
+ * - location：拍摄地点（{ name, lat, lng }）
+ * - tags：标签数组
  * - featured：是否在首页精选展示
  *
- * ⚡ 由 scripts/generate-photos-data.js 自动生成
- * 📝 title/description/location/tags 字段需手动补充完善
+ * ⚡ 由 scripts/update-photos.js 生成
  */
 export const photos = [
-  // ===== 风光 (31张) =====
+  // ===== 风光 (35张) =====
   {
     "id": 1,
     "title": "5I4A3777",
@@ -27,8 +26,8 @@ export const photos = [
     "category": "landscape",
     "src": "/photogs-lizhifeng/photos/landscape/5I4A3777.jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/5I4A3777.webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 5472,
+    "height": 3648,
     "date": "2026-01-02",
     "exif": {
       "camera": "Canon Canon EOS R6",
@@ -41,6 +40,21 @@ export const photos = [
     "location": null,
     "tags": [],
     "featured": true
+  },
+  {
+    "id": 31,
+    "title": "dji export photo 20251205164051153",
+    "description": "",
+    "category": "landscape",
+    "src": "/photogs-lizhifeng/photos/landscape/dji_export_photo_20251205164051153.jpg",
+    "thumbnail": "/photogs-lizhifeng/photos/thumbnails/dji_export_photo_20251205164051153.webp",
+    "width": 3840,
+    "height": 2160,
+    "date": "",
+    "exif": {},
+    "location": null,
+    "tags": [],
+    "featured": false
   },
   {
     "id": 2,
@@ -72,7 +86,7 @@ export const photos = [
     "src": "/photogs-lizhifeng/photos/landscape/DO1010483.jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DO1010483.webp",
     "width": 4000,
-    "height": 3000,
+    "height": 6000,
     "date": "2025-09-14",
     "exif": {
       "camera": "LEICA CAMERA AG LEICA Q (Typ 116)",
@@ -85,6 +99,72 @@ export const photos = [
     "location": null,
     "tags": [],
     "featured": true
+  },
+  {
+    "id": 23,
+    "title": "DSC 0157",
+    "description": "",
+    "category": "landscape",
+    "src": "/photogs-lizhifeng/photos/landscape/DSC_0157.jpg",
+    "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC_0157.webp",
+    "width": 6048,
+    "height": 4032,
+    "date": "2025-01-01",
+    "exif": {
+      "camera": "NIKON CORPORATION NIKON Z f",
+      "lens": null,
+      "focalLength": "20mm",
+      "aperture": "f/6.3",
+      "shutterSpeed": "1/125s",
+      "iso": 100
+    },
+    "location": null,
+    "tags": [],
+    "featured": false
+  },
+  {
+    "id": 128,
+    "title": "DSC 1943",
+    "description": "",
+    "category": "landscape",
+    "src": "/photogs-lizhifeng/photos/landscape/DSC_1943.jpg",
+    "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC_1943.webp",
+    "width": 6048,
+    "height": 4032,
+    "date": "2025-01-28",
+    "exif": {
+      "camera": "NIKON CORPORATION NIKON Z f",
+      "lens": null,
+      "focalLength": "85mm",
+      "aperture": "f/9",
+      "shutterSpeed": "1/2s",
+      "iso": 100
+    },
+    "location": null,
+    "tags": [],
+    "featured": false
+  },
+  {
+    "id": 129,
+    "title": "DSC 2231",
+    "description": "",
+    "category": "landscape",
+    "src": "/photogs-lizhifeng/photos/landscape/DSC_2231 (1).jpg",
+    "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC_2231 (1).webp",
+    "width": 6048,
+    "height": 4032,
+    "date": "2025-01-28",
+    "exif": {
+      "camera": "NIKON CORPORATION NIKON Z f",
+      "lens": null,
+      "focalLength": "40mm",
+      "aperture": "f/4",
+      "shutterSpeed": "1/2s",
+      "iso": 100
+    },
+    "location": null,
+    "tags": [],
+    "featured": false
   },
   {
     "id": 4,
@@ -137,8 +217,8 @@ export const photos = [
     "category": "landscape",
     "src": "/photogs-lizhifeng/photos/landscape/DSC02300.jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC02300.webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 7008,
+    "height": 4672,
     "date": "2026-06-14",
     "exif": {
       "camera": "SONY ILCE-7CM2",
@@ -159,8 +239,8 @@ export const photos = [
     "category": "landscape",
     "src": "/photogs-lizhifeng/photos/landscape/DSC02336 (2).jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC02336 (2).webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 7008,
+    "height": 4672,
     "date": "2026-06-14",
     "exif": {
       "camera": "SONY ILCE-7CM2",
@@ -181,8 +261,8 @@ export const photos = [
     "category": "landscape",
     "src": "/photogs-lizhifeng/photos/landscape/DSC02413 (1).jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC02413 (1).webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 6485,
+    "height": 4323,
     "date": "2026-06-14",
     "exif": {
       "camera": "SONY ILCE-7CM2",
@@ -203,8 +283,8 @@ export const photos = [
     "category": "landscape",
     "src": "/photogs-lizhifeng/photos/landscape/DSC02466 (1).jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC02466 (1).webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 6723,
+    "height": 4285,
     "date": "2026-06-14",
     "exif": {
       "camera": "SONY ILCE-7CM2",
@@ -225,8 +305,8 @@ export const photos = [
     "category": "landscape",
     "src": "/photogs-lizhifeng/photos/landscape/DSC02503.jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC02503.webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 6519,
+    "height": 4346,
     "date": "2026-06-14",
     "exif": {
       "camera": "SONY ILCE-7CM2",
@@ -247,8 +327,8 @@ export const photos = [
     "category": "landscape",
     "src": "/photogs-lizhifeng/photos/landscape/DSC07120.jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC07120.webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 6819,
+    "height": 4546,
     "date": "2025-08-09",
     "exif": {
       "camera": "SONY ILCE-7CM2",
@@ -269,8 +349,8 @@ export const photos = [
     "category": "landscape",
     "src": "/photogs-lizhifeng/photos/landscape/DSC07131.JPG",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC07131.webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 7008,
+    "height": 4672,
     "date": "2025-08-09",
     "exif": {
       "camera": "SONY ILCE-7CM2",
@@ -291,8 +371,8 @@ export const photos = [
     "category": "landscape",
     "src": "/photogs-lizhifeng/photos/landscape/DSC07220.jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC07220.webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 5964,
+    "height": 3976,
     "date": "2025-08-09",
     "exif": {
       "camera": "SONY ILCE-7CM2",
@@ -335,8 +415,8 @@ export const photos = [
     "category": "landscape",
     "src": "/photogs-lizhifeng/photos/landscape/DSC07392.jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC07392.webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 6662,
+    "height": 4442,
     "date": "2025-08-09",
     "exif": {
       "camera": "SONY ILCE-7CM2",
@@ -357,8 +437,8 @@ export const photos = [
     "category": "landscape",
     "src": "/photogs-lizhifeng/photos/landscape/DSC07432 (1).jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC07432 (1).webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 7008,
+    "height": 4672,
     "date": "2025-08-09",
     "exif": {
       "camera": "SONY ILCE-7CM2",
@@ -401,8 +481,8 @@ export const photos = [
     "category": "landscape",
     "src": "/photogs-lizhifeng/photos/landscape/DSCF4477(1) (1).jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSCF4477(1) (1).webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 6092,
+    "height": 4061,
     "date": "2023-11-04",
     "exif": {
       "camera": "FUJIFILM X-S10",
@@ -505,23 +585,16 @@ export const photos = [
     "featured": false
   },
   {
-    "id": 23,
-    "title": "DSC 0157",
+    "id": 130,
+    "title": "IMG 20251206 161729",
     "description": "",
     "category": "landscape",
-    "src": "/photogs-lizhifeng/photos/landscape/DSC_0157.jpg",
-    "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC_0157.webp",
-    "width": 6048,
-    "height": 4032,
-    "date": "2025-01-01",
-    "exif": {
-      "camera": "NIKON CORPORATION NIKON Z f",
-      "lens": null,
-      "focalLength": "20mm",
-      "aperture": "f/6.3",
-      "shutterSpeed": "1/125s",
-      "iso": 100
-    },
+    "src": "/photogs-lizhifeng/photos/landscape/IMG_20251206_161729.jpg",
+    "thumbnail": "/photogs-lizhifeng/photos/thumbnails/IMG_20251206_161729.webp",
+    "width": 1080,
+    "height": 1440,
+    "date": "",
+    "exif": {},
     "location": null,
     "tags": [],
     "featured": false
@@ -643,8 +716,8 @@ export const photos = [
     "category": "landscape",
     "src": "/photogs-lizhifeng/photos/landscape/L1020527.jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/L1020527.webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 6000,
+    "height": 4000,
     "date": "2025-12-04",
     "exif": {
       "camera": "LEICA CAMERA AG LEICA Q (Typ 116)",
@@ -681,14 +754,14 @@ export const photos = [
     "featured": false
   },
   {
-    "id": 31,
-    "title": "dji export photo 20251205164051153",
+    "id": 131,
+    "title": "VID 20251205 073159 00 006",
     "description": "",
     "category": "landscape",
-    "src": "/photogs-lizhifeng/photos/landscape/dji_export_photo_20251205164051153.jpg",
-    "thumbnail": "/photogs-lizhifeng/photos/thumbnails/dji_export_photo_20251205164051153.webp",
-    "width": 4000,
-    "height": 3000,
+    "src": "/photogs-lizhifeng/photos/landscape/VID_20251205_073159_00_006(1764925718040).jpg",
+    "thumbnail": "/photogs-lizhifeng/photos/thumbnails/VID_20251205_073159_00_006(1764925718040).webp",
+    "width": 1920,
+    "height": 1080,
     "date": "",
     "exif": {},
     "location": null,
@@ -696,7 +769,7 @@ export const photos = [
     "featured": false
   },
 
-  // ===== 街拍 (56张) =====
+  // ===== 街拍 (65张) =====
   {
     "id": 32,
     "title": "01065447",
@@ -762,6 +835,28 @@ export const photos = [
     "location": null,
     "tags": [],
     "featured": true
+  },
+  {
+    "id": 132,
+    "title": "B00014893FR1772890591",
+    "description": "",
+    "category": "street",
+    "src": "/photogs-lizhifeng/photos/street/B00014893FR1772890591.jpg",
+    "thumbnail": "/photogs-lizhifeng/photos/thumbnails/B00014893FR1772890591.webp",
+    "width": 8272,
+    "height": 6200,
+    "date": "2026-03-07",
+    "exif": {
+      "camera": "Hasselblad Hasselblad X1D II 50C",
+      "lens": "XCD 45P",
+      "focalLength": "45mm",
+      "aperture": null,
+      "shutterSpeed": "1/800s",
+      "iso": 100
+    },
+    "location": null,
+    "tags": [],
+    "featured": false
   },
   {
     "id": 35,
@@ -902,8 +997,8 @@ export const photos = [
     "category": "street",
     "src": "/photogs-lizhifeng/photos/street/DO1000643.jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DO1000643.webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 6000,
+    "height": 4000,
     "date": "2025-09-13",
     "exif": {
       "camera": "LEICA CAMERA AG LEICA Q (Typ 116)",
@@ -924,8 +1019,8 @@ export const photos = [
     "category": "street",
     "src": "/photogs-lizhifeng/photos/street/DO1000963.jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DO1000963.webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 3984,
+    "height": 2656,
     "date": "2025-09-13",
     "exif": {
       "camera": "LEICA CAMERA AG LEICA Q (Typ 116)",
@@ -946,8 +1041,8 @@ export const photos = [
     "category": "street",
     "src": "/photogs-lizhifeng/photos/street/DO1000989 (1).jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DO1000989 (1).webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 3360,
+    "height": 2240,
     "date": "2025-09-13",
     "exif": {
       "camera": "LEICA CAMERA AG LEICA Q (Typ 116)",
@@ -968,8 +1063,8 @@ export const photos = [
     "category": "street",
     "src": "/photogs-lizhifeng/photos/street/DO1010042 (3).jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DO1010042 (3).webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 5410,
+    "height": 3606,
     "date": "2025-09-13",
     "exif": {
       "camera": "LEICA CAMERA AG LEICA Q (Typ 116)",
@@ -990,8 +1085,8 @@ export const photos = [
     "category": "street",
     "src": "/photogs-lizhifeng/photos/street/DO1010194 (1).jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DO1010194 (1).webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 5903,
+    "height": 3935,
     "date": "2025-09-13",
     "exif": {
       "camera": "LEICA CAMERA AG LEICA Q (Typ 116)",
@@ -1012,8 +1107,8 @@ export const photos = [
     "category": "street",
     "src": "/photogs-lizhifeng/photos/street/DO1010208 (1).jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DO1010208 (1).webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 4360,
+    "height": 2907,
     "date": "2025-09-13",
     "exif": {
       "camera": "LEICA CAMERA AG LEICA Q (Typ 116)",
@@ -1034,8 +1129,8 @@ export const photos = [
     "category": "street",
     "src": "/photogs-lizhifeng/photos/street/DO1010385 (1).jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DO1010385 (1).webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 5620,
+    "height": 3747,
     "date": "2025-09-13",
     "exif": {
       "camera": "LEICA CAMERA AG LEICA Q (Typ 116)",
@@ -1056,8 +1151,8 @@ export const photos = [
     "category": "street",
     "src": "/photogs-lizhifeng/photos/street/DO1010432 (1).jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DO1010432 (1).webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 5645,
+    "height": 3763,
     "date": "2025-09-13",
     "exif": {
       "camera": "LEICA CAMERA AG LEICA Q (Typ 116)",
@@ -1078,8 +1173,8 @@ export const photos = [
     "category": "street",
     "src": "/photogs-lizhifeng/photos/street/DO1020007.jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DO1020007.webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 3360,
+    "height": 2240,
     "date": "2025-10-02",
     "exif": {
       "camera": "LEICA CAMERA AG LEICA Q (Typ 116)",
@@ -1100,8 +1195,8 @@ export const photos = [
     "category": "street",
     "src": "/photogs-lizhifeng/photos/street/DO1020317.JPG",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DO1020317.webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 6000,
+    "height": 4000,
     "date": "2015-01-03",
     "exif": {
       "camera": "LEICA CAMERA AG LEICA Q (Typ 116)",
@@ -1116,14 +1211,58 @@ export const photos = [
     "featured": false
   },
   {
+    "id": 77,
+    "title": "DSC 0711",
+    "description": "",
+    "category": "street",
+    "src": "/photogs-lizhifeng/photos/street/DSC_0711.JPG",
+    "thumbnail": "/photogs-lizhifeng/photos/street/DSC_0711.JPG",
+    "width": 6048,
+    "height": 4032,
+    "date": "",
+    "exif": {
+      "camera": "NIKON CORPORATION NIKON Z f",
+      "lens": null,
+      "focalLength": null,
+      "aperture": null,
+      "shutterSpeed": null,
+      "iso": null
+    },
+    "location": null,
+    "tags": [],
+    "featured": false
+  },
+  {
+    "id": 78,
+    "title": "DSC 0735",
+    "description": "",
+    "category": "street",
+    "src": "/photogs-lizhifeng/photos/street/DSC_0735.jpg",
+    "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC_0735.webp",
+    "width": 6048,
+    "height": 4032,
+    "date": "2025-01-01",
+    "exif": {
+      "camera": "NIKON CORPORATION NIKON Z f",
+      "lens": null,
+      "focalLength": "40mm",
+      "aperture": "f/6.3",
+      "shutterSpeed": "1/125s",
+      "iso": 100
+    },
+    "location": null,
+    "tags": [],
+    "featured": false
+  },
+  {
     "id": 51,
     "title": "DSC00653",
     "description": "",
     "category": "street",
     "src": "/photogs-lizhifeng/photos/street/DSC00653 (1).jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC00653 (1).webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 4671,
+    "height": 6229,
     "date": "2026-06-11",
     "exif": {
       "camera": "SONY ILCE-7CM2",
@@ -1144,8 +1283,8 @@ export const photos = [
     "category": "street",
     "src": "/photogs-lizhifeng/photos/street/DSC00845.jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC00845.webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 6093,
+    "height": 4062,
     "date": "2026-06-11",
     "exif": {
       "camera": "SONY ILCE-7CM2",
@@ -1166,8 +1305,8 @@ export const photos = [
     "category": "street",
     "src": "/photogs-lizhifeng/photos/street/DSC00869.jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC00869.webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 6787,
+    "height": 4345,
     "date": "2026-06-11",
     "exif": {
       "camera": "SONY ILCE-7CM2",
@@ -1188,8 +1327,8 @@ export const photos = [
     "category": "street",
     "src": "/photogs-lizhifeng/photos/street/DSC01008.jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC01008.webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 6080,
+    "height": 4053,
     "date": "2026-06-11",
     "exif": {
       "camera": "SONY ILCE-7CM2",
@@ -1210,8 +1349,8 @@ export const photos = [
     "category": "street",
     "src": "/photogs-lizhifeng/photos/street/DSC01616.jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC01616.webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 4672,
+    "height": 7008,
     "date": "2026-06-12",
     "exif": {
       "camera": "SONY ILCE-7CM2",
@@ -1232,8 +1371,8 @@ export const photos = [
     "category": "street",
     "src": "/photogs-lizhifeng/photos/street/DSC02009.JPG",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC02009.webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 7008,
+    "height": 4672,
     "date": "2026-06-13",
     "exif": {
       "camera": "SONY ILCE-7CM2",
@@ -1248,14 +1387,146 @@ export const photos = [
     "featured": false
   },
   {
+    "id": 133,
+    "title": "DSC02583",
+    "description": "",
+    "category": "street",
+    "src": "/photogs-lizhifeng/photos/street/DSC02583.jpg",
+    "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC02583.webp",
+    "width": 3991,
+    "height": 5986,
+    "date": "2025-06-07",
+    "exif": {
+      "camera": "SONY ILCE-7CM2",
+      "lens": "E 70-180mm F2.8 A056",
+      "focalLength": "180mm",
+      "aperture": "f/2.8",
+      "shutterSpeed": "1/1600s",
+      "iso": 100
+    },
+    "location": null,
+    "tags": [],
+    "featured": false
+  },
+  {
+    "id": 134,
+    "title": "DSC06057",
+    "description": "",
+    "category": "street",
+    "src": "/photogs-lizhifeng/photos/street/DSC06057.jpg",
+    "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC06057.webp",
+    "width": 2028,
+    "height": 3042,
+    "date": "2025-07-06",
+    "exif": {
+      "camera": "SONY ILCE-7CM2",
+      "lens": "E 20-40mm F2.8 A062",
+      "focalLength": "20mm",
+      "aperture": "f/5.6",
+      "shutterSpeed": "1/60s",
+      "iso": 100
+    },
+    "location": null,
+    "tags": [],
+    "featured": false
+  },
+  {
+    "id": 135,
+    "title": "DSC06192",
+    "description": "",
+    "category": "street",
+    "src": "/photogs-lizhifeng/photos/street/DSC06192.jpg",
+    "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC06192.webp",
+    "width": 4672,
+    "height": 7008,
+    "date": "2025-07-13",
+    "exif": {
+      "camera": "SONY ILCE-7CM2",
+      "lens": "E 70-180mm F2.8 A056",
+      "focalLength": "180mm",
+      "aperture": "f/2.8",
+      "shutterSpeed": "1/200s",
+      "iso": 400
+    },
+    "location": null,
+    "tags": [],
+    "featured": false
+  },
+  {
+    "id": 136,
+    "title": "DSC06228",
+    "description": "",
+    "category": "street",
+    "src": "/photogs-lizhifeng/photos/street/DSC06228.jpg",
+    "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC06228.webp",
+    "width": 3923,
+    "height": 5885,
+    "date": "2025-07-13",
+    "exif": {
+      "camera": "SONY ILCE-7CM2",
+      "lens": "E 70-180mm F2.8 A056",
+      "focalLength": "180mm",
+      "aperture": "f/2.8",
+      "shutterSpeed": "1/320s",
+      "iso": 100
+    },
+    "location": null,
+    "tags": [],
+    "featured": false
+  },
+  {
+    "id": 137,
+    "title": "DSC06307",
+    "description": "",
+    "category": "street",
+    "src": "/photogs-lizhifeng/photos/street/DSC06307.jpg",
+    "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC06307.webp",
+    "width": 4672,
+    "height": 7008,
+    "date": "2025-07-13",
+    "exif": {
+      "camera": "SONY ILCE-7CM2",
+      "lens": "E 70-180mm F2.8 A056",
+      "focalLength": "180mm",
+      "aperture": "f/2.8",
+      "shutterSpeed": "1/200s",
+      "iso": 200
+    },
+    "location": null,
+    "tags": [],
+    "featured": false
+  },
+  {
+    "id": 138,
+    "title": "DSC06315",
+    "description": "",
+    "category": "street",
+    "src": "/photogs-lizhifeng/photos/street/DSC06315.jpg",
+    "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC06315.webp",
+    "width": 4672,
+    "height": 7008,
+    "date": "2025-07-13",
+    "exif": {
+      "camera": "SONY ILCE-7CM2",
+      "lens": "E 70-180mm F2.8 A056",
+      "focalLength": "180mm",
+      "aperture": "f/2.8",
+      "shutterSpeed": "1/200s",
+      "iso": 160
+    },
+    "location": null,
+    "tags": [],
+    "featured": false
+  },
+  {
     "id": 57,
     "title": "DSC08967",
     "description": "",
     "category": "street",
     "src": "/photogs-lizhifeng/photos/street/DSC08967 (2).jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC08967 (2).webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 4051,
+    "height": 6075,
     "date": "2025-10-02",
     "exif": {
       "camera": "SONY ILCE-7CM2",
@@ -1276,8 +1547,8 @@ export const photos = [
     "category": "street",
     "src": "/photogs-lizhifeng/photos/street/DSC09058 (1).jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC09058 (1).webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 4320,
+    "height": 6481,
     "date": "2025-10-02",
     "exif": {
       "camera": "SONY ILCE-7CM2",
@@ -1298,8 +1569,8 @@ export const photos = [
     "category": "street",
     "src": "/photogs-lizhifeng/photos/street/DSC09193 (1).jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC09193 (1).webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 4524,
+    "height": 6787,
     "date": "2025-10-02",
     "exif": {
       "camera": "SONY ILCE-7CM2",
@@ -1386,8 +1657,8 @@ export const photos = [
     "category": "street",
     "src": "/photogs-lizhifeng/photos/street/DSC09446.jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC09446.webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 4480,
+    "height": 6720,
     "date": "2025-10-02",
     "exif": {
       "camera": "SONY ILCE-7CM2",
@@ -1408,8 +1679,8 @@ export const photos = [
     "category": "street",
     "src": "/photogs-lizhifeng/photos/street/DSC09468 (1).jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC09468 (1).webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 4129,
+    "height": 5505,
     "date": "2025-10-02",
     "exif": {
       "camera": "SONY ILCE-7CM2",
@@ -1430,8 +1701,8 @@ export const photos = [
     "category": "street",
     "src": "/photogs-lizhifeng/photos/street/DSC09478 (1).jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC09478 (1).webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 4191,
+    "height": 6287,
     "date": "2025-10-02",
     "exif": {
       "camera": "SONY ILCE-7CM2",
@@ -1452,8 +1723,8 @@ export const photos = [
     "category": "street",
     "src": "/photogs-lizhifeng/photos/street/DSC09507 (1).jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC09507 (1).webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 3816,
+    "height": 5724,
     "date": "2025-10-02",
     "exif": {
       "camera": "SONY ILCE-7CM2",
@@ -1474,8 +1745,8 @@ export const photos = [
     "category": "street",
     "src": "/photogs-lizhifeng/photos/street/DSC09602.jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC09602.webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 3755,
+    "height": 5634,
     "date": "2025-10-02",
     "exif": {
       "camera": "SONY ILCE-7CM2",
@@ -1496,8 +1767,8 @@ export const photos = [
     "category": "street",
     "src": "/photogs-lizhifeng/photos/street/DSC09692 (1).jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC09692 (1).webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 4311,
+    "height": 6467,
     "date": "2025-10-02",
     "exif": {
       "camera": "SONY ILCE-7CM2",
@@ -1518,8 +1789,8 @@ export const photos = [
     "category": "street",
     "src": "/photogs-lizhifeng/photos/street/DSC09724.jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC09724.webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 3646,
+    "height": 5469,
     "date": "2025-10-02",
     "exif": {
       "camera": "SONY ILCE-7CM2",
@@ -1688,44 +1959,22 @@ export const photos = [
     "featured": false
   },
   {
-    "id": 77,
-    "title": "DSC 0711",
+    "id": 139,
+    "title": "IMG 20241130 154724",
     "description": "",
     "category": "street",
-    "src": "/photogs-lizhifeng/photos/street/DSC_0711.JPG",
-    "thumbnail": "/photogs-lizhifeng/photos/street/DSC_0711.JPG",
-    "width": 6048,
-    "height": 4032,
-    "date": "",
+    "src": "/photogs-lizhifeng/photos/street/IMG_20241130_154724.jpg",
+    "thumbnail": "/photogs-lizhifeng/photos/thumbnails/IMG_20241130_154724.webp",
+    "width": 2980,
+    "height": 4480,
+    "date": "2024-11-30",
     "exif": {
-      "camera": "NIKON CORPORATION NIKON Z f",
+      "camera": "LEICA CAMERA AG LEICA Q3",
       "lens": null,
-      "focalLength": null,
-      "aperture": null,
-      "shutterSpeed": null,
-      "iso": null
-    },
-    "location": null,
-    "tags": [],
-    "featured": false
-  },
-  {
-    "id": 78,
-    "title": "DSC 0735",
-    "description": "",
-    "category": "street",
-    "src": "/photogs-lizhifeng/photos/street/DSC_0735.jpg",
-    "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC_0735.webp",
-    "width": 6048,
-    "height": 4032,
-    "date": "2025-01-01",
-    "exif": {
-      "camera": "NIKON CORPORATION NIKON Z f",
-      "lens": null,
-      "focalLength": "40mm",
-      "aperture": "f/6.3",
-      "shutterSpeed": "1/125s",
-      "iso": 100
+      "focalLength": "28mm",
+      "aperture": "f/1.7",
+      "shutterSpeed": "1/2500s",
+      "iso": 50
     },
     "location": null,
     "tags": [],
@@ -1760,8 +2009,8 @@ export const photos = [
     "category": "street",
     "src": "/photogs-lizhifeng/photos/street/IMG_20250818_195922.jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/IMG_20250818_195922.webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 4668,
+    "height": 3500,
     "date": "2024-08-03",
     "exif": {
       "camera": "LEICA CAMERA AG LEICA Q (Typ 116)",
@@ -1826,8 +2075,8 @@ export const photos = [
     "category": "street",
     "src": "/photogs-lizhifeng/photos/street/IMG_20260614_204054.jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/IMG_20260614_204054.webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 2957,
+    "height": 3944,
     "date": "2026-06-14",
     "exif": {
       "camera": "vivo vivo X200 Pro mini",
@@ -1864,14 +2113,36 @@ export const photos = [
     "featured": false
   },
   {
+    "id": 140,
+    "title": "IMG 20260815 104222",
+    "description": "",
+    "category": "street",
+    "src": "/photogs-lizhifeng/photos/street/IMG_20260815_104222.jpg",
+    "thumbnail": "/photogs-lizhifeng/photos/thumbnails/IMG_20260815_104222.webp",
+    "width": 3548,
+    "height": 4724,
+    "date": "2025-06-22",
+    "exif": {
+      "camera": "SONY ILCE-7CM2",
+      "lens": null,
+      "focalLength": "180mm",
+      "aperture": "f/5.6",
+      "shutterSpeed": "1/2000s",
+      "iso": 100
+    },
+    "location": null,
+    "tags": [],
+    "featured": false
+  },
+  {
     "id": 85,
     "title": "L1010990",
     "description": "",
     "category": "street",
     "src": "/photogs-lizhifeng/photos/street/L1010990 (3).jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/L1010990 (3).webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 2339,
+    "height": 3119,
     "date": "2025-10-02",
     "exif": {
       "camera": "LEICA CAMERA AG LEICA Q (Typ 116)",
@@ -1892,8 +2163,8 @@ export const photos = [
     "category": "street",
     "src": "/photogs-lizhifeng/photos/street/L104E0574.JPG",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/L104E0574.webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 4399,
+    "height": 2933,
     "date": "2015-02-07",
     "exif": {
       "camera": "LEICA CAMERA AG LEICA Q (Typ 116)",
@@ -1930,7 +2201,29 @@ export const photos = [
     "featured": false
   },
 
-  // ===== 人像 (40张) =====
+  // ===== 人像 (38张) =====
+  {
+    "id": 123,
+    "title": "a10efd058d7c8180104f6d787de95ee1",
+    "description": "",
+    "category": "portrait",
+    "src": "/photogs-lizhifeng/photos/portrait/a10efd058d7c8180104f6d787de95ee1(1).jpg",
+    "thumbnail": "/photogs-lizhifeng/photos/thumbnails/a10efd058d7c8180104f6d787de95ee1(1).webp",
+    "width": 6000,
+    "height": 4000,
+    "date": "",
+    "exif": {
+      "camera": null,
+      "lens": null,
+      "focalLength": null,
+      "aperture": null,
+      "shutterSpeed": null,
+      "iso": null
+    },
+    "location": null,
+    "tags": [],
+    "featured": false
+  },
   {
     "id": 88,
     "title": "DO1010167",
@@ -1938,8 +2231,8 @@ export const photos = [
     "category": "portrait",
     "src": "/photogs-lizhifeng/photos/portrait/DO1010167.jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DO1010167.webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 2694,
+    "height": 4042,
     "date": "2025-09-13",
     "exif": {
       "camera": "LEICA CAMERA AG LEICA Q (Typ 116)",
@@ -1960,8 +2253,8 @@ export const photos = [
     "category": "portrait",
     "src": "/photogs-lizhifeng/photos/portrait/DO1010178.jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DO1010178.webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 2134,
+    "height": 3199,
     "date": "2025-09-13",
     "exif": {
       "camera": "LEICA CAMERA AG LEICA Q (Typ 116)",
@@ -1974,72 +2267,6 @@ export const photos = [
     "location": null,
     "tags": [],
     "featured": true
-  },
-  {
-    "id": 90,
-    "title": "DSC00577",
-    "description": "",
-    "category": "portrait",
-    "src": "/photogs-lizhifeng/photos/portrait/DSC00577.JPG",
-    "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC00577.webp",
-    "width": 4000,
-    "height": 3000,
-    "date": "2026-06-11",
-    "exif": {
-      "camera": "SONY ILCE-7CM2",
-      "lens": "E 28-200mm F2.8-5.6 A071",
-      "focalLength": "51mm",
-      "aperture": "f/3.5",
-      "shutterSpeed": "1/640s",
-      "iso": 100
-    },
-    "location": null,
-    "tags": [],
-    "featured": true
-  },
-  {
-    "id": 91,
-    "title": "DSC01102",
-    "description": "",
-    "category": "portrait",
-    "src": "/photogs-lizhifeng/photos/portrait/DSC01102.jpg",
-    "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC01102.webp",
-    "width": 4000,
-    "height": 3000,
-    "date": "2026-06-11",
-    "exif": {
-      "camera": "SONY ILCE-7CM2",
-      "lens": "E 28-200mm F2.8-5.6 A071",
-      "focalLength": "50mm",
-      "aperture": "f/3.5",
-      "shutterSpeed": "1/800s",
-      "iso": 100
-    },
-    "location": null,
-    "tags": [],
-    "featured": false
-  },
-  {
-    "id": 92,
-    "title": "DSC01847",
-    "description": "",
-    "category": "portrait",
-    "src": "/photogs-lizhifeng/photos/portrait/DSC01847.jpg",
-    "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC01847.webp",
-    "width": 4000,
-    "height": 3000,
-    "date": "2026-06-12",
-    "exif": {
-      "camera": "SONY ILCE-7CM2",
-      "lens": "Viltrox 50mm F2.0 FE",
-      "focalLength": "50mm",
-      "aperture": "f/2.8",
-      "shutterSpeed": "1/50s",
-      "iso": 640
-    },
-    "location": null,
-    "tags": [],
-    "featured": false
   },
   {
     "id": 93,
@@ -2064,16 +2291,67 @@ export const photos = [
     "featured": false
   },
   {
-    "id": 94,
-    "title": "IMG 20260611 WA0001",
+    "id": 90,
+    "title": "DSC00577",
     "description": "",
     "category": "portrait",
-    "src": "/photogs-lizhifeng/photos/portrait/IMG-20260611-WA0001.jpg",
-    "thumbnail": "/photogs-lizhifeng/photos/thumbnails/IMG-20260611-WA0001.webp",
-    "width": 4000,
-    "height": 3000,
-    "date": "",
-    "exif": {},
+    "src": "/photogs-lizhifeng/photos/portrait/DSC00577.JPG",
+    "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC00577.webp",
+    "width": 4672,
+    "height": 7008,
+    "date": "2026-06-11",
+    "exif": {
+      "camera": "SONY ILCE-7CM2",
+      "lens": "E 28-200mm F2.8-5.6 A071",
+      "focalLength": "51mm",
+      "aperture": "f/3.5",
+      "shutterSpeed": "1/640s",
+      "iso": 100
+    },
+    "location": null,
+    "tags": [],
+    "featured": true
+  },
+  {
+    "id": 91,
+    "title": "DSC01102",
+    "description": "",
+    "category": "portrait",
+    "src": "/photogs-lizhifeng/photos/portrait/DSC01102.jpg",
+    "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC01102.webp",
+    "width": 6759,
+    "height": 4506,
+    "date": "2026-06-11",
+    "exif": {
+      "camera": "SONY ILCE-7CM2",
+      "lens": "E 28-200mm F2.8-5.6 A071",
+      "focalLength": "50mm",
+      "aperture": "f/3.5",
+      "shutterSpeed": "1/800s",
+      "iso": 100
+    },
+    "location": null,
+    "tags": [],
+    "featured": false
+  },
+  {
+    "id": 92,
+    "title": "DSC01847",
+    "description": "",
+    "category": "portrait",
+    "src": "/photogs-lizhifeng/photos/portrait/DSC01847.jpg",
+    "thumbnail": "/photogs-lizhifeng/photos/thumbnails/DSC01847.webp",
+    "width": 7008,
+    "height": 4672,
+    "date": "2026-06-12",
+    "exif": {
+      "camera": "SONY ILCE-7CM2",
+      "lens": "Viltrox 50mm F2.0 FE",
+      "focalLength": "50mm",
+      "aperture": "f/2.8",
+      "shutterSpeed": "1/50s",
+      "iso": 640
+    },
     "location": null,
     "tags": [],
     "featured": false
@@ -2195,8 +2473,8 @@ export const photos = [
     "category": "portrait",
     "src": "/photogs-lizhifeng/photos/portrait/IMG_20260716_213919.png",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/IMG_20260716_213919.webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 1124,
+    "height": 1496,
     "date": "",
     "exif": {
       "camera": null,
@@ -2239,8 +2517,8 @@ export const photos = [
     "category": "portrait",
     "src": "/photogs-lizhifeng/photos/portrait/IMG_20260716_214005.png",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/IMG_20260716_214005.webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 1124,
+    "height": 1496,
     "date": "",
     "exif": {
       "camera": null,
@@ -2371,30 +2649,8 @@ export const photos = [
     "category": "portrait",
     "src": "/photogs-lizhifeng/photos/portrait/IMG_6407.PNG",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/IMG_6407.webp",
-    "width": 4000,
-    "height": 3000,
-    "date": "2024-08-30",
-    "exif": {
-      "camera": null,
-      "lens": null,
-      "focalLength": null,
-      "aperture": null,
-      "shutterSpeed": null,
-      "iso": null
-    },
-    "location": null,
-    "tags": [],
-    "featured": false
-  },
-  {
-    "id": 109,
-    "title": "IMG 6408",
-    "description": "",
-    "category": "portrait",
-    "src": "/photogs-lizhifeng/photos/portrait/IMG_6408.PNG",
-    "thumbnail": "/photogs-lizhifeng/photos/thumbnails/IMG_6408.webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 1125,
+    "height": 2436,
     "date": "2024-08-30",
     "exif": {
       "camera": null,
@@ -2431,23 +2687,16 @@ export const photos = [
     "featured": false
   },
   {
-    "id": 111,
-    "title": "IMG 8028",
+    "id": 94,
+    "title": "IMG 20260611 WA0001",
     "description": "",
     "category": "portrait",
-    "src": "/photogs-lizhifeng/photos/portrait/IMG_8028.JPG",
-    "thumbnail": "/photogs-lizhifeng/photos/thumbnails/IMG_8028.webp",
-    "width": 1280,
-    "height": 1920,
+    "src": "/photogs-lizhifeng/photos/portrait/IMG-20260611-WA0001.jpg",
+    "thumbnail": "/photogs-lizhifeng/photos/thumbnails/IMG-20260611-WA0001.webp",
+    "width": 876,
+    "height": 584,
     "date": "",
-    "exif": {
-      "camera": null,
-      "lens": null,
-      "focalLength": null,
-      "aperture": null,
-      "shutterSpeed": null,
-      "iso": null
-    },
+    "exif": {},
     "location": null,
     "tags": [],
     "featured": false
@@ -2460,7 +2709,7 @@ export const photos = [
     "src": "/photogs-lizhifeng/photos/portrait/L1020117.jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/L1020117.webp",
     "width": 4000,
-    "height": 3000,
+    "height": 6000,
     "date": "2025-12-03",
     "exif": {
       "camera": "LEICA CAMERA AG LEICA Q (Typ 116)",
@@ -2482,7 +2731,7 @@ export const photos = [
     "src": "/photogs-lizhifeng/photos/portrait/L1020136.jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/L1020136.webp",
     "width": 4000,
-    "height": 3000,
+    "height": 6000,
     "date": "2025-12-03",
     "exif": {
       "camera": "LEICA CAMERA AG LEICA Q (Typ 116)",
@@ -2504,7 +2753,7 @@ export const photos = [
     "src": "/photogs-lizhifeng/photos/portrait/L1020334.jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/L1020334.webp",
     "width": 4000,
-    "height": 3000,
+    "height": 6000,
     "date": "2025-12-03",
     "exif": {
       "camera": "LEICA CAMERA AG LEICA Q (Typ 116)",
@@ -2525,8 +2774,8 @@ export const photos = [
     "category": "portrait",
     "src": "/photogs-lizhifeng/photos/portrait/L1020364.jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/L1020364.webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 5465,
+    "height": 3633,
     "date": "2025-12-03",
     "exif": {
       "camera": "LEICA CAMERA AG LEICA Q (Typ 116)",
@@ -2548,7 +2797,7 @@ export const photos = [
     "src": "/photogs-lizhifeng/photos/portrait/L1020425.jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/L1020425.webp",
     "width": 4000,
-    "height": 3000,
+    "height": 6000,
     "date": "2025-12-03",
     "exif": {
       "camera": "LEICA CAMERA AG LEICA Q (Typ 116)",
@@ -2569,8 +2818,8 @@ export const photos = [
     "category": "portrait",
     "src": "/photogs-lizhifeng/photos/portrait/L1020633.jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/L1020633.webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 3567,
+    "height": 2378,
     "date": "2025-12-04",
     "exif": {
       "camera": "LEICA CAMERA AG LEICA Q (Typ 116)",
@@ -2591,8 +2840,8 @@ export const photos = [
     "category": "portrait",
     "src": "/photogs-lizhifeng/photos/portrait/L1040122.JPG",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/L1040122.webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 3661,
+    "height": 5784,
     "date": "2015-01-24",
     "exif": {
       "camera": "LEICA CAMERA AG LEICA Q (Typ 116)",
@@ -2613,8 +2862,8 @@ export const photos = [
     "category": "portrait",
     "src": "/photogs-lizhifeng/photos/portrait/L1040318.JPG",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/L1040318.webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 3877,
+    "height": 5816,
     "date": "2015-01-24",
     "exif": {
       "camera": "LEICA CAMERA AG LEICA Q (Typ 116)",
@@ -2636,7 +2885,7 @@ export const photos = [
     "src": "/photogs-lizhifeng/photos/portrait/L104E0343.JPG",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/L104E0343.webp",
     "width": 4000,
-    "height": 3000,
+    "height": 6000,
     "date": "2015-01-24",
     "exif": {
       "camera": "LEICA CAMERA AG LEICA Q (Typ 116)",
@@ -2657,8 +2906,8 @@ export const photos = [
     "category": "portrait",
     "src": "/photogs-lizhifeng/photos/portrait/MEITU_20260624_214403495.jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/MEITU_20260624_214403495.webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 7008,
+    "height": 4672,
     "date": "2026-06-24",
     "exif": {
       "camera": "SONY ILCE-7CM2",
@@ -2679,8 +2928,8 @@ export const photos = [
     "category": "portrait",
     "src": "/photogs-lizhifeng/photos/portrait/MEITU_20260624_215716015.jpg",
     "thumbnail": "/photogs-lizhifeng/photos/thumbnails/MEITU_20260624_215716015.webp",
-    "width": 4000,
-    "height": 3000,
+    "width": 4672,
+    "height": 7008,
     "date": "2026-06-24",
     "exif": {
       "camera": "SONY ILCE-7CM2",
@@ -2689,28 +2938,6 @@ export const photos = [
       "aperture": "f/2.5",
       "shutterSpeed": "1/250s",
       "iso": 100
-    },
-    "location": null,
-    "tags": [],
-    "featured": false
-  },
-  {
-    "id": 123,
-    "title": "a10efd058d7c8180104f6d787de95ee1",
-    "description": "",
-    "category": "portrait",
-    "src": "/photogs-lizhifeng/photos/portrait/a10efd058d7c8180104f6d787de95ee1(1).jpg",
-    "thumbnail": "/photogs-lizhifeng/photos/thumbnails/a10efd058d7c8180104f6d787de95ee1(1).webp",
-    "width": 6000,
-    "height": 4000,
-    "date": "",
-    "exif": {
-      "camera": null,
-      "lens": null,
-      "focalLength": null,
-      "aperture": null,
-      "shutterSpeed": null,
-      "iso": null
     },
     "location": null,
     "tags": [],
